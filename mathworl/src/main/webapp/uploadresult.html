@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload Result</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* BODY */
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:white;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.06);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* TITLE */
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:26px;
+    color:#38bdf8;
+}
+
+/* REG INPUT */
+.reg-box input{
+    border:2px solid #38bdf8;
+    font-weight:bold;
+}
+
+/* INPUT */
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    background:#0f172a;
+    color:white;
+}
+
+/* SUBJECT CARD */
+.subject{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.subject input{
+    flex:1;
+}
+
+/* BUTTON */
+.btn{
+    margin-top:15px;
+    padding:12px;
+    width:100%;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#22c55e,#16a34a);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ADD BUTTON */
+.add-btn{
+    background:linear-gradient(45deg,#3b82f6,#06b6d4);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .subject{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📄 Upload Student Result</h2>
+
+<form action="UploadResultServlet" method="POST">
+
+<div class="reg-box">
+<input type="text" name="reg" placeholder="Enter Registration Number" required>
+</div>
+
+<div id="subjects"></div>
+
+<button type="button" class="btn add-btn" onclick="addSubject()">+ Add Subject</button>
+
+<button type="submit" class="btn">Upload Result</button>
+
+</form>
+
+</div>
+
+<script>
+
+function addSubject(){
+    let div = document.createElement("div");
+    div.className = "subject";
+
+    div.innerHTML = `
+        <input name="subName" placeholder="Subject" required>
+        <input name="maxMarks" placeholder="Max Marks" required>
+        <input name="obtMarks" placeholder="Obtained Marks" required>
+    `;
+
+    document.getElementById("subjects").appendChild(div);
+}
+
+// Default 1 row
+window.onload = addSubject;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Delete Attendance</title>
+
+<style>
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg,#ff7e5f,#feb47b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.card {
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:320px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h2 {
+    margin-bottom:20px;
+}
+
+input {
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button {
+    width:100%;
+    padding:12px;
+    background:#ff7e5f;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover {
+    background:#e7644c;
+}
+
+.msg {
+    margin-top:10px;
+    color:green;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>🗑 Delete Attendance</h2>
+
+<form action="DeleteAttendanceServlet" method="POST">
+
+    <label>Start Date</label>
+    <input type="date" name="startDate" required>
+
+    <label>End Date</label>
+    <input type="date" name="endDate" required>
+
+    <button type="submit">Delete Data</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Login</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+.box{
+    background: rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter: blur(12px);
+    width:320px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.6);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    background:#1e293b;
+    color:white;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background: linear-gradient(45deg,#06b6d4,#3b82f6);
+    border:none;
+    border-radius:20px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.error{
+    color:#f87171;
+    font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Student Login</h2>
+
+    <!-- 🔴 Error Message -->
+    <p id="errorMsg" class="error"></p>
+
+    <form action="StudentLoginServlet" method="post">
+        <input type="number" name="regNo" placeholder="Registration No" required>
+        <input type="date" name="dob" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const error = params.get("error");
+
+if(error === "invalid"){
+    document.getElementById("errorMsg").innerText = "Invalid Registration No or DOB ❌";
+}
+
+if(error === "db"){
+    document.getElementById("errorMsg").innerText = "Database Connection Error ⚠️";
+}
+</script>
+
+</body>
+</html>

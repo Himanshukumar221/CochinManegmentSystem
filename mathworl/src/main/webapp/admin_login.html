@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Demo Page</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+/* BODY */
+body{
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:white;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.5);
+}
+
+.navbar h2{
+    color:#38bdf8;
+}
+
+/* MENU */
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#cbd5e1;
+}
+
+/* CARD SECTION */
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    width:280px;
+    border-radius:15px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
+
+.card button{
+    margin-top:10px;
+    padding:10px;
+    width:100%;
+    border:none;
+    border-radius:8px;
+    background:orange;
+    cursor:pointer;
+}
+
+/* LOGIN BOX */
+.login{
+    margin:40px auto;
+    width:300px;
+    padding:20px;
+    background:rgba(255,255,255,0.1);
+    border-radius:15px;
+    text-align:center;
+}
+
+.login input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .login{
+        width:90%;
+    }
+
+    .navbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .navbar a{
+        display:block;
+        margin:5px 0;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>MATHS WORLD</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Welcome to Coaching</h1>
+        <p>Best learning platform for students</p>
+    </div>
+</div>
+
+<!-- CARDS -->
+<div class="container">
+
+    <div class="card">
+        <h3>Admin Login</h3>
+        <p>Login for admin panel</p>
+        <button>Login</button>
+    </div>
+
+    <div class="card">
+        <h3>Attendance</h3>
+        <p>Manage student attendance</p>
+        <button>Open</button>
+    </div>
+
+    <div class="card">
+        <h3>Notes</h3>
+        <p>Download study material</p>
+        <button>View</button>
+    </div>
+
+</div>
+
+<!-- LOGIN BOX -->
+<div class="login">
+    <h3>Quick Login</h3>
+
+    <input type="text" placeholder="User ID">
+    <input type="password" placeholder="Password">
+
+    <button style="
+        width:100%;
+        padding:10px;
+        background:green;
+        color:white;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+    ">
+        Login
+    </button>
+</div>
+
+</body>
+</html>

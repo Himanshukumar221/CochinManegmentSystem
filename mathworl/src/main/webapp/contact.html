@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact - MATHS WORLD MUNGER</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top,#1e3a8a,#0f172a);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: cyan;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('home.png') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(30,58,138,0.7));
+}
+
+.hero h1 {
+    font-size: 40px;
+    z-index: 1;
+    position: relative;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 8%;
+}
+
+/* CONTAINER */
+.contact-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* FORM BOX */
+.form-box {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    color: cyan;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg,#06b6d4,#3b82f6);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #3b82f6;
+}
+
+/* INFO BOX */
+.info-box {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.info-box h2 {
+    color: cyan;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    margin: 10px 0;
+    color: #cbd5f5;
+}
+
+/* MAP */
+.map {
+    margin-top: 40px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>CONTACT US</h1>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="section">
+
+    <div class="contact-container">
+
+        <!-- FORM -->
+        <div class="form-box">
+            <h2>Send Message</h2>
+
+            <input type="text" placeholder="Mr Akshay Sir">
+            <input type="email" placeholder="">
+            <input type="text" placeholder="6205113052">
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button>Send Message</button>
+        </div>
+
+        <!-- INFO -->
+        <div class="info-box">
+            <h2>Contact Info</h2>
+
+            <p> MATHS WORLD MUNGER</p>
+            <p> Munger, Bihar</p>
+            <p> +91 6205113052</p>
+            <p> mathsworld@gmail.com</p>
+
+            <p>
+                Office Time: 8:00 AM - 6:00 PM
+            </p>
+        </div>
+
+    </div>
+
+    <!-- MAP -->
+    <div class="map">
+        <iframe 
+            src="https://maps.google.com/maps?q=munger&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 MATHS WORLD MUNGER | All Rights Reserved
+</div>
+
+</body>
+</html>

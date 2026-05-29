@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Attendance</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:linear-gradient(135deg,#36d1dc,#5b86e5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+h2{text-align:center;}
+
+input,button{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:#5b86e5;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3b5fc0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2> View Attendance</h2>
+
+<form action="ViewAttendanceServlet" method="post">
+
+<label>Start Time</label>
+<input type="time" name="start_time" required>
+
+<label>End Time</label>
+<input type="time" name="end_time" required>
+
+<button type="submit">View Attendance</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload Notes</title>
+<style>
+body{
+    font-family:Arial;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    width:350px;
+    text-align:center;
+}
+
+input,button{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Upload Notes PDF</h2>
+
+<form action="UploadNotesServlet" method="post" enctype="multipart/form-data">
+
+    <input type="text" name="note_name" placeholder="Enter Notes Name" required>
+
+    <input type="file" name="pdf" accept="application/pdf" required>
+
+    <button type="submit">Upload</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

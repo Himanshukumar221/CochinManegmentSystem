@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>View Attendance</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 400px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    select, input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    select:focus, input:focus {
+        border-color: #66a6ff;
+        box-shadow: 0 0 5px rgba(102,166,255,0.5);
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(120deg, #36d1dc, #5b86e5);
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>📊 View Attendance</h2>
+
+    <form action="http://localhost:8080/from/ViewAttendanceServlet" method="post">
+
+        <!-- Class -->
+        <select name="std_class" required>
+    <option value="">Select Class</option>
+
+    <!-- Pre-Primary -->
+    <option value="NC">NC</option>
+    <option value="LKG">LKG</option>
+    <option value="UKG">UKG</option>
+
+    <!-- Primary -->
+    <option value="1">Class 1</option>
+    <option value="2">Class 2</option>
+    <option value="3">Class 3</option>
+    <option value="4">Class 4</option>
+    <option value="5">Class 5</option>
+
+    <!-- Middle -->
+    <option value="6">Class 6</option>
+    <option value="7">Class 7</option>
+    <option value="8">Class 8</option>
+
+    <!-- Secondary -->
+    <option value="9">Class 9</option>
+    <option value="10">Class 10</option>
+</select>
+
+        <!-- Date -->
+        <input type="date" name="attendance_date" required>
+
+        <button type="submit">Show Attendance</button>
+
+    </form>
+</div>
+
+</body>
+</html>

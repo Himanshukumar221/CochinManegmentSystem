@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Student</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#667eea;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#5a67d8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+<h2>Add Student</h2>
+
+<form action="http://localhost:8080/mathworl/AddStudentServlet" method="post">
+
+<input type="number" name="std_reg_no" placeholder="Registration No" required>
+<input type="text" name="std_name" placeholder="Student Name" required>
+<input type="text" name="f_name" placeholder="Father Name" required>
+<input type="text" name="mobile_no" placeholder="Mobile No" required>
+<input type="date" name="dob" required>
+<input type="text" name="std_address" placeholder="Address" required>
+
+<!-- 🔥 Time Fields -->
+<label>Start Time</label>
+<input type="time" name="start_time" required>
+
+<label>End Time</label>
+<input type="time" name="end_time" required>
+
+<button type="submit">Save Student</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

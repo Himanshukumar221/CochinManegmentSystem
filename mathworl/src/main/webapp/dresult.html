@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delete Results</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    width:400px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+input,button{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:red;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+button:hover{
+    background:darkred;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Delete Results (Range)</h2>
+
+<form action="PreviewDeleteServlet" method="post">
+
+    Start ID:
+    <input type="number" name="start_id" required>
+
+    End ID:
+    <input type="number" name="end_id" required>
+
+    <button type="submit">Preview Results</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

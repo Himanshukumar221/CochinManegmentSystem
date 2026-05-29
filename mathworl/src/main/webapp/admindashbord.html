@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Admin Dashboard | DPS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; display: flex; height: 100vh; background: #e0e5ec; }
+        @media (max-width:768px){
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+        /* Sidebar: 3D Depth Effect */
+        .sidebar { 
+            width: 280px; background: #e0e5ec; padding: 30px;
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+            z-index: 10;
+        }
+        .sidebar h2 { font-size: 22px; color: #333; margin-bottom: 40px; text-shadow: 1px 1px 2px #fff; }
+        .sidebar ul { list-style: none; }
+        .sidebar ul li a { 
+            display: block; padding: 15px; margin: 15px 0; color: #555;
+            text-decoration: none; border-radius: 12px;
+            background: #e0e5ec; transition: 0.4s;
+            box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+        }
+        .sidebar ul li a:hover { 
+            transform: scale(1.05); /* 3D pop effect */
+            box-shadow: inset 6px 6px 12px #b8b9be, inset -6px -6px 12px #ffffff;
+            color: #b21f1f;
+        }
+
+        /* Main Content with 3D Depth */
+        .main-content { flex-grow: 1; padding: 40px; perspective: 1000px; }
+        
+        iframe { 
+            width: 100%; height: 100%; border: none; border-radius: 20px;
+            background: #e0e5ec;
+            box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+            transform: rotateY(0deg); transition: 1s;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>MATH WORLD MUNGER</h2>
+         <ul>
+        <li><a href="studentmange.html" target="content-frame" onclick="setActive(this)">👨‍🎓 Manage Student</a></li>
+
+
+
+        <li><a href="viewattendence.html" target="content-frame" onclick="setActive(this)">📊 Manage Attendance</a></li>
+
+        <li><a href="uploadresult.html" target="content-frame" onclick="setActive(this)">📄 Manage Result</a></li>
+         <li><a href="deleteatt.html" target="content-frame" onclick="setActive(this)">  🗑 Delete Attendance Data</a></li>
+         <li><a href="dresult.html" target="content-frame" onclick="setActive(this)">  🗑 Delete Result Data</a></li>
+           <li><a href="unotes.html" target="content-frame" onclick="setActive(this)"> Upload Notes</a></li>
+           <li><a href="ViewAllResultsServlet" target="content-frame" onclick="setActive(this)">Check Result List</a></li>
+       
+        
+    </ul>
+    </div>
+    
+
+
+    <div class="main-content">
+        <iframe name="content-frame" src="studentmange.html"></iframe>
+    </div>
+
+</body>
+</html>

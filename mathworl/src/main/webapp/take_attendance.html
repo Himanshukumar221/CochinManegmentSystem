@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Take Attendance</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:30px;
+    color:white;
+}
+
+.container{
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:10px;
+    width:500px;
+    margin:auto;
+}
+
+input,button{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:#667eea;
+    color:white;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Select Batch Time</h2>
+
+<form action="LoadStudentServlet" method="post">
+    <label>Start Time</label>
+    <input type="time" name="start_time" required>
+
+    <label>End Time</label>
+    <input type="time" name="end_time" required>
+
+    <button type="submit">Load Students</button>
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Student | DPS</title>
+    <style>
+        /* General Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e0e5ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container styling */
+        .container {
+            display: flex;
+            gap: 40px;
+            padding: 50px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Premium 3D Card Styling */
+        .card {
+            width: 280px;
+            height: 220px;
+            background: #e0e5ec;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #444;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            /* Depth Shadow */
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+
+        /* Hover Effect: 3D Pop Out */
+        .card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow: 30px 30px 80px #bebebe, -30px -30px 80px #ffffff;
+            color: #b21f1f;
+        }
+
+        /* Icon Styling */
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        /* Text Styling */
+        .card p {
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="studentadd.html" class="card">
+            <div class="icon">➕</div>
+            <p>Add Student<br>Information</p>
+        </a>
+
+        
+
+        <a href="delete_student.html" class="card">
+            <div class="icon">🗑️</div>
+            <p>Delete Student<br>Information</p>
+        </a>
+    </div>
+
+</body>
+</html>
